@@ -7,7 +7,7 @@ This crate includes the [rp2040-hal], but also configures each pin of the
 RP2040 chip according to how it is connected up on the Pico.
 
 [Raspberry Pi Pico]: https://www.raspberrypi.org/products/raspberry-pi-pico/
-[rp-pico]: https://github.com/rp-rs/rp-hal/tree/main/boards/rp-pico
+[rp-pico]: https://github.com/rp-rs/rp-pico
 [rp2040-hal]: https://github.com/rp-rs/rp-hal/tree/main/rp2040-hal
 [Raspberry Silicon RP2040]: https://www.raspberrypi.org/products/rp2040/
 
@@ -16,7 +16,7 @@ RP2040 chip according to how it is connected up on the Pico.
 To use this crate, your `Cargo.toml` file should contain:
 
 ```toml
-rp-pico = "0.3.0"
+rp-pico = "0.4.0"
 ```
 
 In your program, you will need to call `rp_pico::Pins::new` to create
@@ -30,7 +30,7 @@ devices. See the [examples](./examples) folder for more details.
 To compile an example, clone the _rp-hal_ repository and run:
 
 ```console
-rp-hal/boards/rp-pico $ cargo build --release --example <name>
+rp-pico $ cargo build --release --example <name>
 ```
 
 You will get an ELF file called
@@ -44,7 +44,7 @@ USB drive exported by the RP2040 bootloader, simply boot your board into
 bootloader mode and run:
 
 ```console
-rp-hal/boards/rp-pico $ cargo run --release --example <name>
+rp-pico $ cargo run --release --example <name>
 ```
 
 If you get an error about not being able to find `elf2uf2-rs`, try:
